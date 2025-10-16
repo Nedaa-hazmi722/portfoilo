@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نداء الحازمي - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #e3d2c8;
+            overflow-x: hidden;
+        }
+
+        .container {
+            position: relative;
+            width: 1440px;
+            height: 2160px;
+            background-color: #e3d2c8;
+            margin: 0 auto;
+        }
+
+        /* قسم الهيدر - الجزء العلوي البنفسجي */
+        .header-section {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1440px;
+            height: 415px;
+            background-color: #482b41;
+        }
+
+        /* العنوان الرئيسي "مرحباً، أنا نداء الحازمي" */
+        .main-title {
+            position: absolute;
+            top: 114px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 630px;
+            height: 49px;
+            font-weight: 700;
+            font-size: 64px;
+            color: #e3d2c8;
+            text-align: center;
+            line-height: normal;
+        }
+
+        /* العنوان الفرعي "مصممة واجهات..." */
+        .subtitle {
+            position: absolute;
+            top: 208px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1042px;
+            height: 53px;
+            font-weight: 400;
+            font-size: 48px;
+            color: white;
+            text-align: center;
+            line-height: normal;
+        }
+
+        /* عناوين الأقسام (نبذة عني، أعمالي، تواصل معي) */
+        .section-title {
+            position: absolute;
+            font-weight: 700;
+            font-size: 49px;
+            color: #482b41;
+            text-align: center;
+            line-height: normal;
+        }
+
+        .about-title {
+            top: 483px;
+            left: 1206px;
+            transform: translateX(-50%);
+            width: 254px;
+            height: 58px;
+        }
+
+        .works-title {
+            top: 934px;
+            left: 1197px;
+            transform: translateX(-50%);
+            width: 254px;
+            height: 58px;
+        }
+
+        .contact-title {
+            top: 1811px;
+            left: 1135.5px;
+            transform: translateX(-50%);
+            width: 395px;
+            height: 74px;
+        }
+
+        /* نص "نبذة عني" */
+        .about-text {
+            position: absolute;
+            top: 580px;
+            left: 79px;
+            width: 1245px;
+            height: 332px;
+            font-weight: 300;
+            font-size: 30px;
+            color: #674f6a;
+            text-align: justify;
+            line-height: normal;
+        }
+
+        /* أيقونات النجمة */
+        .star-icon {
+            position: absolute;
+            width: 29px;
+            height: 26px;
+        }
+
+        .star-1 {
+            top: 499px;
+            left: 1343px;
+        }
+
+        .star-2 {
+            top: 950px;
+            left: 1321px;
+        }
+
+        .star-3 {
+            top: 1823px;
+            left: 1333px;
+        }
+
+        /* بطاقات المشاريع (الخلفيات الوردية) */
+        .project-card {
+            position: absolute;
+            background-color: rgba(206, 178, 190, 0.44);
+            border-radius: 26px;
+        }
+
+        .project-ghina {
+            top: 1046px;
+            left: 22px;
+            width: 424px;
+            height: 665px;
+        }
+
+        .project-sanad {
+            top: 1046px;
+            left: 507px;
+            width: 431px;
+            height: 664px;
+        }
+
+        .project-escape {
+            top: 1046px;
+            left: 999px;
+            width: 414px;
+            height: 664px;
+        }
+
+        /* عناوين المشاريع */
+        .project-title {
+            position: absolute;
+            font-weight: 700;
+            font-size: 25px;
+            color: #482b41;
+            text-align: center;
+            line-height: normal;
+            height: 29px;
+            width: 300px;
+            transform: translateX(-50%);
+        }
+
+        .title-ghina {
+            top: 1468px;
+            left: 223px;
+        }
+
+        .title-sanad {
+            top: 1468px;
+            left: 723px;
+        }
+
+        .title-escape {
+            top: 1463px;
+            left: 1216px;
+        }
+
+        /* وصف المشاريع */
+        .project-description {
+            position: absolute;
+            font-weight: 300;
+            font-size: 20px;
+            color: #674f6a;
+            text-align: right;
+            line-height: normal;
+            height: 135px;
+            width: 382px;
+            transform: translateX(-100%);
+        }
+
+        .desc-ghina {
+            top: 1516px;
+            left: 422px;
+        }
+
+        .desc-sanad {
+            top: 1511px;
+            left: 906px;
+            width: 379px;
+        }
+
+        .desc-escape {
+            top: 1516px;
+            left: 1366px;
+            width: 337px;
+        }
+
+        /* التقنيات المستخدمة */
+        .project-tech {
+            position: absolute;
+            font-weight: 200;
+            font-size: 20px;
+            color: #8e7592;
+            text-align: center;
+            line-height: normal;
+            height: 29px;
+            width: 300px;
+            transform: translateX(-50%);
+            top: 1677px;
+        }
+
+        .tech-ghina {
+            left: 243px;
+        }
+
+        .tech-sanad {
+            left: 723px;
+        }
+
+        .tech-escape {
+            left: 1202px;
+        }
+
+        /* أزرار التواصل - تم تحسينها */
+        .contact-buttons-container {
+            position: absolute;
+            top: 1915px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .contact-button {
+            background-color: #572f54;
+            border-radius: 26px;
+            padding: 15px 40px;
+            font-weight: 700;
+            font-size: 20px;
+            color: #e3d2c8;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        .contact-button:hover {
+            background-color: #6d3a66;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(217, 182, 209, 0.541);
+        }
+
+        /* صور المشاريع - تم توحيد الأسلوب */
+        .project-image {
+            position: absolute;
+            border-radius: 19px;
+            overflow: hidden;
+        }
+
+        .img-ghina {
+            top: 1068px;
+            left: 52px;
+            width: 358px;
+            height: 385px;
+        }
+
+        .img-sanad {
+            top: 1068px;
+            left: 533px;
+            width: 380px;
+            height: 386px;
+        }
+
+        /* تم تبسيط صورة Escape لتكون مثل البقية */
+        .img-escape {
+            top: 1068px;
+            left: 1035px;
+            width: 344px;
+            height: 385px;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.85;
+        }
+
+        /* لعرض placeholder في حال عدم وجود الصور */
+        .project-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        /* للشاشات الأصغر */
+        @media (max-width: 1440px) {
+            .container {
+                width: 100%;
+                transform: scale(0.7);
+                transform-origin: top center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- قسم الهيدر -->
+        <div class="header-section"></div>
+        
+        <p class="main-title">مرحبــًا ، انا نداء الحازمي</p>
+        
+        <p class="subtitle">مصممة واجهات وتجربة مستخدم – مطورة ألعاب</p>
+
+        <!-- قسم نبذة عني -->
+        <p class="section-title about-title">نبذة عني</p>
+        
+        <svg class="star-icon star-1" fill="none" preserveAspectRatio="none" viewBox="0 0 29 26">
+            <g clip-path="url(#clip0_1_115)">
+                <path d="M28.8016 9.52716C28.5544 8.8218 28.0606 8.20648 27.3932 7.7722C26.7258 7.33791 25.9202 7.10772 25.0956 7.11566H19.8164L18.213 2.635C17.9608 1.9297 17.4653 1.31443 16.798 0.877902C16.1306 0.441374 15.3259 0.206151 14.4998 0.206151C13.6737 0.206151 12.8689 0.441374 12.2015 0.877902C11.5342 1.31443 11.0387 1.9297 10.7865 2.635L9.18309 7.11566H3.90388C3.0819 7.11671 2.28132 7.35062 1.61648 7.78398C0.951639 8.21733 0.456552 8.82797 0.201933 9.52867C-0.0526864 10.2294 -0.0538133 10.9843 0.198713 11.6856C0.451239 12.3869 0.944501 12.9987 1.60804 13.4337L5.90488 16.2503L4.27121 20.7862C4.0072 21.4898 4.00386 22.2509 4.26168 22.9563C4.51949 23.6616 5.02466 24.2734 5.70188 24.7003C6.36749 25.141 7.1741 25.3771 8.00152 25.3734C8.82894 25.3697 9.63288 25.1264 10.2935 24.6797L14.4998 21.9042L18.7072 24.6765C19.3716 25.1147 20.1738 25.3526 20.9986 25.3562C21.8234 25.3598 22.6282 25.1289 23.2973 24.6965C23.9665 24.2642 24.4655 23.6528 24.7226 22.9502C24.9797 22.2476 24.9817 21.4899 24.7283 20.7862L23.0946 16.2503L27.3963 13.4337C28.0674 13.0042 28.5665 12.3924 28.8196 11.6888C29.0727 10.9852 29.0664 10.2273 28.8016 9.52716ZM25.9705 11.6841L20.9631 14.9655C20.7575 15.1 20.6044 15.2893 20.5259 15.5064C20.4473 15.7236 20.4473 15.9574 20.5257 16.1745L22.4288 21.4503C22.5251 21.7179 22.5243 22.006 22.4265 22.2731C22.3287 22.5403 22.1389 22.7727 21.8844 22.9371C21.6299 23.1014 21.3239 23.1892 21.0103 23.1877C20.6967 23.1863 20.3916 23.0957 20.139 22.9291L15.2151 19.6791C15.0077 19.5425 14.7571 19.4688 14.4998 19.4688C14.2424 19.4688 13.9918 19.5425 13.7844 19.6791L8.86046 22.9291C8.60802 23.098 8.30214 23.1904 7.98716 23.193C7.67218 23.1955 7.36447 23.1081 7.10865 22.9433C6.85284 22.7786 6.6622 22.545 6.56438 22.2766C6.46656 22.0081 6.46665 21.7187 6.56463 21.4503L8.47379 16.1745C8.55224 15.9574 8.55218 15.7236 8.47363 15.5064C8.39508 15.2893 8.24205 15.1 8.03638 14.9655L3.02904 11.6841C2.77687 11.5185 2.58949 11.2858 2.49368 11.0191C2.39787 10.7524 2.39852 10.4653 2.49555 10.1989C2.59257 9.93257 2.781 9.7005 3.03393 9.53589C3.28685 9.37127 3.59133 9.28253 3.90388 9.28233H10.0664C10.3222 9.28232 10.5714 9.20952 10.7781 9.07441C10.9849 8.9393 11.1384 8.74885 11.2167 8.5305L13.0896 3.29691C13.1858 3.0291 13.3742 2.79554 13.6278 2.62985C13.8814 2.46416 14.1872 2.3749 14.501 2.3749C14.8148 2.3749 15.1205 2.46416 15.3741 2.62985C15.6277 2.79554 15.8162 3.0291 15.9123 3.29691L17.7852 8.5305C17.8635 8.74885 18.0171 8.9393 18.2238 9.07441C18.4305 9.20952 18.6797 9.28232 18.9355 9.28233H25.098C25.4106 9.28253 25.7151 9.37127 25.968 9.53589C26.2209 9.7005 26.4094 9.93257 26.5064 10.1989C26.6034 10.4653 26.6041 10.7524 26.5082 11.0191C26.4124 11.2858 26.2251 11.5185 25.9729 11.6841H25.9705Z" fill="#482B41"/>
+            </g>
+            <defs>
+                <clipPath id="clip0_1_115">
+                    <rect fill="white" height="26" width="29"/>
+                </clipPath>
+            </defs>
+        </svg>
+
+        <p class="about-text">
+            أنا خريجة علوم الحاسب الآلي من جامعة أم القرى، شغوفة بتصميم واجهات وتجربة المستخدم، ومتخصصة في تطوير الألعاب الإلكترونية باستخدام Unity، إضافة إلى اهتمامي بتصميم وتطوير واجهات المواقع (Front-End Development).<br>
+            أتمتع بمهارات تقنية متقدمة تشمل التصميم، تطوير الألعاب، البرمجة، وحل المشكلات، مع خبرة في إنشاء واجهات تفاعلية وتجربة مستخدم سلسة، والعمل ضمن فرق متعددة التخصصات بكفاءة عالية لتحقيق أهداف المشاريع.
+        </p>
+
+        <!-- قسم أعمالي -->
+        <p class="section-title works-title">أعمالي</p>
+        
+        <svg class="star-icon star-2" fill="none" preserveAspectRatio="none" viewBox="0 0 29 26">
+            <g clip-path="url(#clip0_1_118)">
+                <path d="M28.8016 9.52716C28.5544 8.8218 28.0606 8.20648 27.3932 7.7722C26.7258 7.33791 25.9202 7.10772 25.0956 7.11566H19.8164L18.213 2.635C17.9608 1.9297 17.4653 1.31443 16.798 0.877902C16.1306 0.441374 15.3259 0.206151 14.4998 0.206151C13.6737 0.206151 12.8689 0.441374 12.2015 0.877902C11.5342 1.31443 11.0387 1.9297 10.7865 2.635L9.18309 7.11566H3.90388C3.0819 7.11671 2.28132 7.35062 1.61648 7.78398C0.951639 8.21733 0.456552 8.82797 0.201933 9.52867C-0.0526864 10.2294 -0.0538133 10.9843 0.198713 11.6856C0.451239 12.3869 0.944501 12.9987 1.60804 13.4337L5.90488 16.2503L4.27121 20.7862C4.0072 21.4898 4.00386 22.2509 4.26168 22.9563C4.51949 23.6616 5.02466 24.2734 5.70188 24.7003C6.36749 25.141 7.1741 25.3771 8.00152 25.3734C8.82894 25.3697 9.63288 25.1264 10.2935 24.6797L14.4998 21.9042L18.7072 24.6765C19.3716 25.1147 20.1738 25.3526 20.9986 25.3562C21.8234 25.3598 22.6282 25.1289 23.2973 24.6965C23.9665 24.2642 24.4655 23.6528 24.7226 22.9502C24.9797 22.2476 24.9817 21.4899 24.7283 20.7862L23.0946 16.2503L27.3963 13.4337C28.0674 13.0042 28.5665 12.3924 28.8196 11.6888C29.0727 10.9852 29.0664 10.2273 28.8016 9.52716ZM25.9705 11.6841L20.9631 14.9655C20.7575 15.1 20.6044 15.2893 20.5259 15.5064C20.4473 15.7236 20.4473 15.9574 20.5257 16.1745L22.4288 21.4503C22.5251 21.7179 22.5243 22.006 22.4265 22.2731C22.3287 22.5403 22.1389 22.7727 21.8844 22.9371C21.6299 23.1014 21.3239 23.1892 21.0103 23.1877C20.6967 23.1863 20.3916 23.0957 20.139 22.9291L15.2151 19.6791C15.0077 19.5425 14.7571 19.4688 14.4998 19.4688C14.2424 19.4688 13.9918 19.5425 13.7844 19.6791L8.86046 22.9291C8.60802 23.098 8.30214 23.1904 7.98716 23.193C7.67218 23.1955 7.36447 23.1081 7.10865 22.9433C6.85284 22.7786 6.6622 22.545 6.56438 22.2766C6.46656 22.0081 6.46665 21.7187 6.56463 21.4503L8.47379 16.1745C8.55224 15.9574 8.55218 15.7236 8.47363 15.5064C8.39508 15.2893 8.24205 15.1 8.03638 14.9655L3.02904 11.6841C2.77687 11.5185 2.58949 11.2858 2.49368 11.0191C2.39787 10.7524 2.39852 10.4653 2.49555 10.1989C2.59257 9.93257 2.781 9.7005 3.03393 9.53589C3.28685 9.37127 3.59133 9.28253 3.90388 9.28233H10.0664C10.3222 9.28232 10.5714 9.20952 10.7781 9.07441C10.9849 8.9393 11.1384 8.74885 11.2167 8.5305L13.0896 3.29691C13.1858 3.0291 13.3742 2.79554 13.6278 2.62985C13.8814 2.46416 14.1872 2.3749 14.501 2.3749C14.8148 2.3749 15.1205 2.46416 15.3741 2.62985C15.6277 2.79554 15.8162 3.0291 15.9123 3.29691L17.7852 8.5305C17.8635 8.74885 18.0171 8.9393 18.2238 9.07441C18.4305 9.20952 18.6797 9.28232 18.9355 9.28233H25.098C25.4106 9.28253 25.7151 9.37127 25.968 9.53589C26.2209 9.7005 26.4094 9.93257 26.5064 10.1989C26.6034 10.4653 26.6041 10.7524 26.5082 11.0191C26.4124 11.2858 26.2251 11.5185 25.9729 11.6841H25.9705Z" fill="#482B41"/>
+            </g>
+            <defs>
+                <clipPath id="clip0_1_118">
+                    <rect fill="white" height="26" width="29"/>
+                </clipPath>
+            </defs>
+        </svg>
+
+        <!-- خلفيات بطاقات المشاريع -->
+        <div class="project-card project-ghina"></div>
+        <div class="project-card project-sanad"></div>
+        <div class="project-card project-escape"></div>
+
+        <!-- صور المشاريع -->
+        <div class="project-image img-ghina">
+            <img src="متجر غنى.jpg" alt="متجر غنى" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="project-placeholder" style="display:none; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">Ghina Store</div>
+        </div>
+
+        <div class="project-image img-sanad">
+            <img src="app sanad.jpg" alt="تطبيق سند" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="project-placeholder" style="display:none; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">Sanad App</div>
+        </div>
+
+        <div class="project-image img-escape">
+            <img src="esc.jpg" alt="لعبة الهروب من الغرفة" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="project-placeholder" style="display:none; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">Escape Room</div>
+        </div>
+
+        <!-- عناوين المشاريع -->
+        <p class="project-title title-ghina">Ghina Store</p>
+        <p class="project-title title-sanad">Sanad App</p>
+        <p class="project-title title-escape">Escape Room Game</p>
+
+        <!-- أوصاف المشاريع -->
+        <p class="project-description desc-ghina">
+            متجر إلكتروني متخصص في بيع الإكسسوارات اليدوية المصنوعة من الخرز بتصاميم عصرية تجمع بين البساطة والأناقة. تم تصميم واجهات التطبيق بعناية لضمان تجربة تسوّق سهلة وجذابة تعكس هوية العلامة وروح الحِرف اليدوية.
+        </p>
+
+        <p class="project-description desc-sanad">
+            تطبيق مبتكر يهدف إلى تسهيل حياة الأمهات من خلال ربطهن بمربيات ومدرسين مؤهلين لرعاية وتعليم أطفالهن بكل مرونة وسهولة.يوفر تجربة استخدام مريحة بتصميم واجهات بسيطة تُمكّن الأمهات من اختيار المربية أو المعلمة المناسبة وفق احتياجاتهن الشخصية.
+        </p>
+
+        <p class="project-description desc-escape">
+            لعبة هروب من الغرفة بتصميم مستوحى من أجواء الرعب، تضم أربع غرف تحتوي على ألغاز ورسائل تفاعلية، والهدف منها إيجاد وسيلة للهروب.تم تطويرها باستخدام Unity مع التركيز على تجربة المستخدم، الرسوم التفاعلية، والمؤثرات الصوتية.
+        </p>
+
+        <!-- التقنيات المستخدمة -->
+        <p class="project-tech tech-ghina">Figma</p>
+        <p class="project-tech tech-sanad">Figma</p>
+        <p class="project-tech tech-escape">Unity UI , C#</p>
+
+        <!-- قسم التواصل -->
+        <p class="section-title contact-title">تواصل معي</p>
+        
+        <svg class="star-icon star-3" fill="none" preserveAspectRatio="none" viewBox="0 0 29 26">
+            <g clip-path="url(#clip0_1_119)">
+                <path d="M28.8016 9.52716C28.5544 8.8218 28.0606 8.20648 27.3932 7.7722C26.7258 7.33791 25.9202 7.10772 25.0956 7.11566H19.8164L18.213 2.635C17.9608 1.9297 17.4653 1.31443 16.798 0.877902C16.1306 0.441374 15.3259 0.206151 14.4998 0.206151C13.6737 0.206151 12.8689 0.441374 12.2015 0.877902C11.5342 1.31443 11.0387 1.9297 10.7865 2.635L9.18309 7.11566H3.90388C3.0819 7.11671 2.28132 7.35062 1.61648 7.78398C0.951639 8.21733 0.456552 8.82797 0.201933 9.52867C-0.0526864 10.2294 -0.0538133 10.9843 0.198713 11.6856C0.451239 12.3869 0.944501 12.9987 1.60804 13.4337L5.90488 16.2503L4.27121 20.7862C4.0072 21.4898 4.00386 22.2509 4.26168 22.9563C4.51949 23.6616 5.02466 24.2734 5.70188 24.7003C6.36749 25.141 7.1741 25.3771 8.00152 25.3734C8.82894 25.3697 9.63288 25.1264 10.2935 24.6797L14.4998 21.9042L18.7072 24.6765C19.3716 25.1147 20.1738 25.3526 20.9986 25.3562C21.8234 25.3598 22.6282 25.1289 23.2973 24.6965C23.9665 24.2642 24.4655 23.6528 24.7226 22.9502C24.9797 22.2476 24.9817 21.4899 24.7283 20.7862L23.0946 16.2503L27.3963 13.4337C28.0674 13.0042 28.5665 12.3924 28.8196 11.6888C29.0727 10.9852 29.0664 10.2273 28.8016 9.52716ZM25.9705 11.6841L20.9631 14.9655C20.7575 15.1 20.6044 15.2893 20.5259 15.5064C20.4473 15.7236 20.4473 15.9574 20.5257 16.1745L22.4288 21.4503C22.5251 21.7179 22.5243 22.006 22.4265 22.2731C22.3287 22.5403 22.1389 22.7727 21.8844 22.9371C21.6299 23.1014 21.3239 23.1892 21.0103 23.1877C20.6967 23.1863 20.3916 23.0957 20.139 22.9291L15.2151 19.6791C15.0077 19.5425 14.7571 19.4688 14.4998 19.4688C14.2424 19.4688 13.9918 19.5425 13.7844 19.6791L8.86046 22.9291C8.60802 23.098 8.30214 23.1904 7.98716 23.193C7.67218 23.1955 7.36447 23.1081 7.10865 22.9433C6.85284 22.7786 6.6622 22.545 6.56438 22.2766C6.46656 22.0081 6.46665 21.7187 6.56463 21.4503L8.47379 16.1745C8.55224 15.9574 8.55218 15.7236 8.47363 15.5064C8.39508 15.2893 8.24205 15.1 8.03638 14.9655L3.02904 11.6841C2.77687 11.5185 2.58949 11.2858 2.49368 11.0191C2.39787 10.7524 2.39852 10.4653 2.49555 10.1989C2.59257 9.93257 2.781 9.7005 3.03393 9.53589C3.28685 9.37127 3.59133 9.28253 3.90388 9.28233H10.0664C10.3222 9.28232 10.5714 9.20952 10.7781 9.07441C10.9849 8.9393 11.1384 8.74885 11.2167 8.5305L13.0896 3.29691C13.1858 3.0291 13.3742 2.79554 13.6278 2.62985C13.8814 2.46416 14.1872 2.3749 14.501 2.3749C14.8148 2.3749 15.1205 2.46416 15.3741 2.62985C15.6277 2.79554 15.8162 3.0291 15.9123 3.29691L17.7852 8.5305C17.8635 8.74885 18.0171 8.9393 18.2238 9.07441C18.4305 9.20952 18.6797 9.28232 18.9355 9.28233H25.098C25.4106 9.28253 25.7151 9.37127 25.968 9.53589C26.2209 9.7005 26.4094 9.93257 26.5064 10.1989C26.6034 10.4653 26.6041 10.7524 26.5082 11.0191C26.4124 11.2858 26.2251 11.5185 25.9729 11.6841H25.9705Z" fill="#482B41"/>
+            </g>
+            <defs>
+                <clipPath id="clip0_1_119">
+                    <rect fill="white" height="26" width="29"/>
+                </clipPath>
+            </defs>
+        </svg>
+
+        <!-- أزرار التواصل -->
+        <div class="contact-buttons-container">
+            <a href="mailto:nedaaalhazmi1@gmail.com" class="contact-button" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="margin-left: 10px;">
+                    <path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" fill="currentColor"/>
+                </svg>
+                البريد الإلكتروني
+            </a>
+            <a href="https://www.linkedin.com/in/nedaa-alhazmi-29b6542a0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer" class="contact-button" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="margin-left: 10px;">
+                    <path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z" fill="currentColor"/>
+                </svg>
+                لينكدإن
+            </a>
+        </div>
